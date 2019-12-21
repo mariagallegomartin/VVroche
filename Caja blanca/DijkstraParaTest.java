@@ -154,23 +154,23 @@ public class Dijkstra {
 	 */
 	public ArrayList<Integer> getPath(Integer ini, Integer end) {
 		line = "";
-		line += "155"; if(!dijkstraExec) { 
-			error = true; line += "156";
-			line += "157"; return null; 
+		line += "155 "; if(!dijkstraExec) { 
+			error = true; line += "156 ";
+			line += "157 "; return null; 
 		}
 		
-		ArrayList<Integer> path = new ArrayList<Integer>(); line += "160";
+		ArrayList<Integer> path = new ArrayList<Integer>(); line += "160 ";
 		
 		//Runs over the path from end to ini by
 		//jumping through the previous nodes.
-		Integer cur = end; line += "164";
-		path.add(cur); line += "165";
+		Integer cur = end; line += "164 ";
+		path.add(cur); line += "165 ";
 		line += "166"; while(cur != ini) { 
-			path.add(prev[cur]); line += "167";
-			cur = prev[cur]; line += "168";
+			path.add(prev[cur]); line += "167 ";
+			cur = prev[cur]; line += "168 ";
 		}
 		
-		line += "171"; return path; 
+		line += "171 "; return path; 
 	}
 	
 	/**

@@ -47,7 +47,7 @@ class DijkstraTest {
 		 *Es un grafo ya ejecutado por lo que en el primero rombo va a la izquierda
 		 *pero que no entra en el bucle while*/
 		dijkstra.getPath(0, 0);
-		assertEquals("155160164165166171", dijkstra.line);
+		assertEquals("155 160 164 165 166 171 ", dijkstra.line);
 	}
 	
 	@Test
@@ -56,16 +56,16 @@ class DijkstraTest {
 		 *Es un grafo ya ejecutado por lo que en el primero rombo va a la izquierda
 		 *pero que entra en el bucle while*/
 		dijkstra.getPath(0, 2);
-		assertEquals("155160164165166167168167168171", dijkstra.line);
+		assertEquals("155 160 164 165 166 167 168 167 168 171 ", dijkstra.line);
 	}
 	
 	@Test
 	void testGetPath3() {
 		/*PATH3:
 		 *Es un grafo no ejecutado por lo que en el primer rombo va a la derecha
-		 *y ahí finaliza*/
+		 *y ahÃ­ finaliza*/
 		dijkstra3.getPath(new Integer(0), new Integer(0));
-		assertEquals("155156157", dijkstra3.line);
+		assertEquals("155 156 157 ", dijkstra3.line);
 	}
 
 }
